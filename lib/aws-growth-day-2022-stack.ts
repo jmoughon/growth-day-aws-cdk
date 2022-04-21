@@ -53,6 +53,8 @@ export class AwsGrowthDay2022Stack extends Stack {
       bucketName: "awsgrowthday2022",
       publicReadAccess: false,
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      enforceSSL: true,
+      encryption: s3.BucketEncryption.S3_MANAGED,
 
       /**
        * The default removal policy is RETAIN, which means that cdk destroy will not attempt to delete
